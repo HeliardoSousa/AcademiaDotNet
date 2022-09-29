@@ -149,25 +149,111 @@
             }
             */
 
+            /*
             //QUESTAO 08
+            float[] vetor = new float[30];
+            for (int i = 0; i < 30; i++)
+            {
+                Console.WriteLine("Digite: ");
+                vetor[i] = float.Parse(Console.ReadLine());
+            }
+            for (int i = 0; i < 30; i++)
+            {
+                if (vetor[i] < 0)
+                {
+                    Console.WriteLine("Posicao: " + (i+1));
+                }
+            }
+            */
 
+            /*
             //QUESTAO 09
+            int[] vetor = new int[10];
+            int aux = 0;
+
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Digite:");
+                vetor[i] = int.Parse(Console.ReadLine());
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = i; j < 10; j++)
+                {
+                    if (vetor[i] > vetor[j])
+                    {
+                        aux = vetor[i];
+                        vetor[i] = vetor[j];
+                        vetor[j] = aux;
+                    }
+                }
+            }
+
+            Console.WriteLine("Novo vetor crescente");
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(vetor[i]);
+            }
+            */
 
             //QUESTAO 10
+            //int[] vetor = new vetor[20];
 
+
+            /*
             //QUESTAO 11
+            int[] vetor = new int[5], vetorAux = new int[5];
 
+            for(int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("digite: ");
+                vetor[i] = int.Parse(Console.ReadLine());
+                vetorAux[4-i] = vetor[i];
+            }
+            Console.WriteLine("------------");
+            for (int i = 0; i < 5; i++)
+            {
+                vetor[i] = vetorAux[i];
+                Console.WriteLine(vetor[i]);
+            }
+            */
+
+            /*
             //QUESTAO 12
+            int[] vetor = new int[10];
+            int ocorre = 0, numero = 0;
+
+            for(int i = 0; i < 10; i++)
+            {
+                Console.WriteLine("Digite: ");
+                vetor[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine("Digite o numero a procura: ");
+            numero = int.Parse(Console.ReadLine());
+            for(int i = 0; i < 10; i++)
+            {
+                if (vetor[i] == numero)
+                {
+                    Console.WriteLine("Numero encontrado!");
+                    Console.WriteLine("Posicao: "+(i+1));
+                    ocorre++;
+                }
+            }
+            if (ocorre == 0) Console.WriteLine("Numero nao encontrado");
+            */
 
             //QUESTAO 13
 
+
             //QUESTAO 14
+
 
             //QUESTAO 15
 
+
             //QUESTAO 16
-
-
+            //int[] x = new int[10], y = new int[10];
 
 
         }
