@@ -1,4 +1,8 @@
-﻿using System.Net.Http.Headers;
+﻿using System;
+using System.Data.Common;
+using System.Net.Http.Headers;
+using System.Runtime.Intrinsics.Arm;
+using System.Xml;
 
 namespace ListaExercicio05
 {
@@ -257,11 +261,8 @@ namespace ListaExercicio05
             }
             */
 
-            //QUESTAO 08
-            //NÃO TEM ESSA QUESTÃO
-
             /*
-            //QUESTAO 09
+            //QUESTAO 08
             int[,] matriz = new int[4, 4];
             for (int i = 0; i < 4; i++)
             {
@@ -294,7 +295,7 @@ namespace ListaExercicio05
             */
 
             /*
-            //QUESTAO 10
+            //QUESTAO 09
             int[,] matriz = new int[3, 3];
             int numero = 0, cont =0;
             for (int i = 0; i < 3; i++)
@@ -330,7 +331,7 @@ namespace ListaExercicio05
             */
 
             /*
-            //QUESTAO 11
+            //QUESTAO 10
             int[,] a = new int[4, 4];
             int[,] b = new int[4, 4];
             int somaA = 0, somaB = 0;
@@ -401,7 +402,7 @@ namespace ListaExercicio05
             */
 
             /*
-            //QUESTAO 12
+            //QUESTAO 11
             double[,] a = new double[3, 3];
             double[,] matrizResultante = new double[3, 3];
 
@@ -444,6 +445,255 @@ namespace ListaExercicio05
                 Console.WriteLine();
             }
             */
+
+            /*
+            //QUESTAO 12
+            int[,] matriz = new int[4,3];
+            Random random = new Random();
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    matriz[i, j] = random.Next(0, 100);
+                }
+            }
+
+            Console.WriteLine("Mostrando a tabela:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("[" + matriz[i, j] + "]");
+                    
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Mostrando onde a soma dos indices sao pares: ");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    if((i+j) % 2 == 0)
+                    {
+                        Console.Write("[" + matriz[i, j] + "] ");
+                    }
+                }
+            }
+            */
+
+            /*
+            //QUESTAO 13
+            int ordem = 5, cont = 0;
+            int[,] matriz = new int[ordem, ordem];
+            int somaPrincipal = 0, somaSecundaria = 0;
+            Random random = new Random();
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for (int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    matriz[i, j] = random.Next(0, 10);
+                }
+            }
+            Console.WriteLine("Mostrando a tabela:");
+            for (int i = 0; i < ordem; i++)
+            {
+                for (int j = 0; j < ordem; j++)
+                {
+                    Console.Write("[" + matriz[i, j] + "]");
+                    if (i == j)
+                    {
+                        somaPrincipal = somaPrincipal + matriz[i, j];
+                        somaSecundaria = somaSecundaria + matriz[i, ordem - (j + 1)];
+                    }
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine($"Soma da diagonal principal: {somaPrincipal}");
+            Console.WriteLine($"Soma da diagonal Secundaria: {somaSecundaria}");
+            */
+
+
+            /*
+            //QUESTAO 14
+            int ordem = 5, cont = 0;
+            int[,] matriz = new int[ordem, ordem];
+            Random random = new Random();
+
+            for (int i = 0; i < matriz.GetLength(0); i++)
+            {
+                for(int j = 0; j < matriz.GetLength(1); j++)
+                {
+                    Console.WriteLine($"[{i},{j}]:");
+                    matriz[i, j] = int.Parse(Console.ReadLine());
+                }
+            }
+            Console.WriteLine("Mostrando a tabela:");
+            for (int i = 0; i < ordem; i++)
+            {
+                for (int j = 0; j < ordem; j++)
+                {
+                    Console.Write("[" + matriz[i, j] + "]");
+                    if(i == j)
+                    {
+                        if (matriz[i,j] == matriz[i, ordem- (j + 1)])
+                        {
+                            cont++;
+                        }
+                    }
+                }
+                Console.WriteLine();
+            }
+            if(cont == ordem)
+            {
+                Console.WriteLine("A diagonal principal e secundaria sao iguais");
+            }
+            else
+            {
+                Console.WriteLine("a diagonal principal e secundaria nao sao iguais");
+            }
+            */
+
+
+            /*
+            //QUESTAO 15
+            int[,] matrizA = new int[4, 4], matrizB = new int[4,4];
+            int[,] matrizResultante = new int[4,4];
+            Random random = new Random();
+
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    matrizA[i, j] = random.Next(0, 100);
+                    matrizB[i, j] = random.Next(0, 100);
+                    matrizResultante[i, j] = matrizA[i, j] + matrizB[i, j];
+                }
+            }
+
+            Console.WriteLine("Mostrando a tabela A:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("[" + matrizA[i, j] + "]");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Mostrando a tabela B:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("[" + matrizB[i, j] + "]");
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Mostrando a tabela resultante:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("[" + matrizResultante[i, j] + "]");
+                }
+                Console.WriteLine();
+            }
+            */
+
+
+            /*
+            //QUESTAO 16
+            int[,] matriz = new int[3, 4];
+            int[,] matrizTransposta = new int[4, 3];
+
+            Random random = new Random();
+
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    matriz[i, j] = random.Next(0, 10);
+                }
+            }
+
+            Console.WriteLine("Mostrando a tabela:");
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 4; j++)
+                {
+                    Console.Write("[" + matriz[i, j] + "]");
+                    matrizTransposta[j, i] = matriz[i, j];
+                }
+                Console.WriteLine();
+            }
+
+            Console.WriteLine("Mostrando a tabela transposta:");
+            for (int i = 0; i < 4; i++)
+            {
+                for (int j = 0; j < 3; j++)
+                {
+                    Console.Write("[" + matrizTransposta[i, j] + "]");
+                }
+                Console.WriteLine();
+            }
+            */
+
+            /*
+            //QUESTAO 17
+            //DESAFIO
+            int[,] matriz = new int[10, 10];
+            int miniMax = 999, linha =  0, coluna=0;
+            int maiorElem = -999;
+            Random random = new Random();
+
+            //Preenchendo aleatoriamente
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    matriz[i, j] = random.Next(0, 100);
+                }
+            }
+
+            for (int i = 0; i < 10; i++)
+            {
+                for(int j = 0; j < 10; j++)
+                {
+                    if(maiorElem < matriz[i, j])
+                    {
+                        maiorElem = matriz[i, j];
+                        linha = i;
+                    }
+                }
+            }
+            for(int i = 0; i < 10; i++)
+            {
+                if (matriz[linha, i] < miniMax)
+                {
+                    miniMax = matriz[linha, i];
+                    coluna = i;
+                }
+            }
+            Console.WriteLine("Mostrando a tabela:");
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                {
+                    Console.Write("[" + matriz[i, j] + "]");
+                }
+                Console.WriteLine();
+            }
+            Console.WriteLine("-------------------------------");
+            Console.WriteLine($"O maior elemento é {maiorElem}");
+            Console.WriteLine($"O minimax elemento é {miniMax}");
+            Console.WriteLine($"Econtrado na linha {linha+1} e coluna {coluna+1}");
+            */
+
         }
     }
 }
