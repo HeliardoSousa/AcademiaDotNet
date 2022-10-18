@@ -35,9 +35,41 @@ namespace ListaExercicio08
             pers.ExibirDados();
             */
 
+            /*
             //QUESTAO 02
+            string nome;
+            string tipo;
+            List<Cachorro> cachorros = new List<Cachorro>();
+            List<Gato> gatos = new List<Gato>();
+            List<Peixe> peixes = new List<Peixe>();
 
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine($"Informe o nome do {i + 1} animal:");
+                nome = Console.ReadLine();
+                do
+                {
+                    Console.WriteLine($"Informe o tipo(cachorro, gato ou peixe) do {i + 1} animal:");
+                    tipo = Console.ReadLine();
+                } while (!tipo.Equals("cachorro") && !tipo.Equals("gato") && !tipo.Equals("peixe"));
+                if (tipo.Equals("cachorro"))
+                {
+                    cachorros.Add(new Cachorro(nome, 8));
+                }else if (tipo.Equals("gato"))
+                {
+                    gatos.Add(new Gato(nome, 8));
+                }else
+                {
+                    peixes.Add(new Peixe(nome, 8));
+                }
+                    Console.Clear();
+            }
 
+            Console.WriteLine($"Quantiade de Cachorros: {cachorros.Count}" +
+                $"\nQuantidade de Gatos: {gatos.Count}" +
+                $"\nQuantidade de Peixes: {peixes.Count}");
+            */
+            
             /*
             //QUESTAO 03
             List<Asteroide> asteroides = new List<Asteroide>();
@@ -109,10 +141,21 @@ namespace ListaExercicio08
             cenario.ExibirTempoExistencia();
             */
 
+            /*
             //QUESTAO 05
+            List<PlanoCartesiano> planoCartesiano = new List<PlanoCartesiano>();
+
+            planoCartesiano.Add(new PlanoCartesiano(10, 15));
+            planoCartesiano.Add(new PlanoCartesiano(20, 30));
+            planoCartesiano.Add(new PlanoCartesiano(3, 6));
+
+            foreach(var plano in planoCartesiano)
+            {
+                plano.Exibir();
+            }
+            */
 
             /*
-            //FALTA FINALIZAR
             //QUESTAO 06
             List<Funcionario> func = new List<Funcionario>();
             int opcao = 0;
@@ -136,7 +179,20 @@ namespace ListaExercicio08
                         string data = Console.ReadLine();
                         Console.WriteLine("Digite o rg do funcionario:");
                         string rg = Console.ReadLine();
-                        func.Add(new Funcionario(nome, departamento, salario, data, rg));
+                        int cargo;
+                        do
+                        {
+                            Console.WriteLine("Digite o cargo(1 - Gerente || 2 - Operador)");
+                            cargo = int.Parse(Console.ReadLine());
+                        } while (cargo != 1 && cargo != 2);
+                        if(cargo == 1)
+                        {
+                            func.Add(new Gerente(nome, departamento, salario, data, rg));
+                        }
+                        else
+                        {
+                            func.Add(new Operador(nome, departamento, salario, data, rg));
+                        }
                         break;
                     case 2:
                         Console.WriteLine("Funcionarios:");
@@ -154,7 +210,6 @@ namespace ListaExercicio08
                 }
             } while (opcao != 0);
             */
-
 
             /*
             //QUESTAO 07

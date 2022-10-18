@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ListaExercicio08
 {
-    internal class Funcionario
+    abstract class Funcionario
     {
         private string _nome;
         private string Departamento { get; }
@@ -24,6 +24,8 @@ namespace ListaExercicio08
             this.Rg = rg;
             Ativo = true;
         }
+
+        public abstract void ExecutaTrbalho();
 
         public void bonifica(double bonus)
         {
