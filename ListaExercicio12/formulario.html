@@ -1,48 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Formulario</title>
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./css/formulario.css">
 </head>
-<body background="./img/image-background.png">
+<body">
     <header>
-        <nav>
+        <nav class="menu-navegacao">
             <ul>
-                <li><a href="index.html" style="color: white;">Inicio</a></li>
-                <li><a href="pagina02.html" style="color: white;">Pagina02</a></li>
-                <li><a href="formulario.html" style="color: white;">Formulario</a></li>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pagina02.html">produtos</a></li>
+                <li class="menu-final"><a href="formulario.html">Cadastre-se</a></li>
             </ul>
         </nav>
     </header>
-    
-    <section style="color: white;">
-        <h2>Formulario</h2>
-        <form action="">
-            <label>Primeiro Nome:</label>
-            <input type="text"><br>
-            <label>Segundo Nome:</label>
-            <input type="text">
-        </form>
+
+    <section class="section-formulario">
+        <div class="formulario">
+            <h2>Cadastre-se</h2>
+            <form >
+                <label>Primeiro Nome:</label><br>
+                <input type="text"><br>
+                <label>Segundo Nome:</label><br>
+                <input type="text">
+                <label>Email</label><br>
+                <input type="email"><br>
+            </form>
+            <button type="submit">Cadastrar</button>
+        </div>
+        
+        
     </section>
 
-    <br>
+    </body>
 
-    <section style="color: white;">
-        <table border="1">
-
-            <tr>
-                <td>Linha 1, coluna1</td>
-                <td>Linha 1, coluna2</td>
-            </tr>
-
-            <tr>
-                <td>Linha 2, coluna1</td>
-                <td>Linha 2, coluna2</td>
-            </tr>
-            
-        </table>
-    </section>
-</body>
 </html>
