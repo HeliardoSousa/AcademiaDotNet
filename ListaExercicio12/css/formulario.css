@@ -26,14 +26,14 @@ a{
 }
 
 .section-formulario{
-    margin: auto;
-    width: 60%;
+    margin:auto;
+    width: 40%;
     height: 250px;
     background-color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 20px;
     border-radius: 10px;
-    margin-top: 1px;
+    margin-top: 3rem;
 }
 
 .formulario > h2 {
@@ -43,7 +43,6 @@ a{
 
 form > label{
     text-transform: uppercase;
-    margin-top: 2%;
 }
 
 form > input{
@@ -54,4 +53,17 @@ form > input{
     margin-bottom: 10px;
 }
 
+footer.rodape{
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    color: black;
+    text-align: center;
+    background-color: white;
+  }
 
+footer.rodape > p{
+    margin-top: 0.7rem;
+}

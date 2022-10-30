@@ -1,5 +1,6 @@
 body{
     background-image: url("../img/image-background.png");
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 header{
     height: 3em;
@@ -23,4 +24,40 @@ ul > li{
 }
 a{
     text-decoration: none;
+}
+
+section{
+    width: 60%;
+    margin: auto;
+}
+
+section > h1{
+    margin-top: 4%;
+    font-size: 3rem;
+    color: white;
+}
+
+section > hr{
+    width: 100%;
+}
+
+section > p{
+    color: white;
+    text-indent: 1.5em;
+    text-align: justify;
+}
+
+footer.rodape{
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    position: fixed;
+    width: 100%;
+    color: black;
+    text-align: center;
+    background-color: white;
+  }
+
+footer.rodape > p{
+    margin-top: 0.7rem;
 }
