@@ -1,0 +1,14 @@
+table{
+    border: 1px solid green;
+}
+
+td{
+    background-color: slategray;
+    width: 100px;
+    height: 25px;
+    color: yellow;
+}
+
+#item-2:hover{
+    background-color: yellow;
+}

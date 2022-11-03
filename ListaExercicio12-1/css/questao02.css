@@ -1,0 +1,28 @@
+body{
+    width: 100%;
+}
+.div-1{
+    background-color: blue;
+    height: 40px;
+    width: 49%;
+    float: left;
+}
+.div-2{
+    background-color: blueviolet;
+    height: 40px;
+    width: 49%;
+    float: right;
+    
+}
+.div-3{
+    background-color: red;
+    height: 40px;
+    width: 49%;
+    float: left;
+}
+.div-4{
+    background-color: green;
+    height: 40px;
+    width: 49%;
+    float: right;
+}

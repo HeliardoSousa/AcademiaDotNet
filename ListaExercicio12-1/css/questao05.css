@@ -1,0 +1,13 @@
+.principal{
+    background-color: darkgray;
+    padding: 5px;
+    width: 100%;
+    height: 255px;
+}
+.img{
+    width: 30%;
+    float: left;
+}
+.texto{
+    width: 65%;
+}
