@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q10</title>
+</head>
+<body>
+    <Label>Nome: </Label>
+    <input type="text">
+    <input type="radio" id="fisica" name="pessoa" value="FISICA" onchange="campoPessoa()">
+    <label>Fisica</label>
+    <input type="radio" id="juridica" name="pessoa" value="JURIDICA" onchange="campoPessoa()"> 
+    <label>Juridica</label><br><br>
+    <Label>CPF: </Label>
+    <input type="text" id="cpf">
+    <Label>CNPF</Label>
+    <input type="text" id="cnpj"><br><br>
+    <Label>Data de Nascimento: </Label>
+    <input type="number" id="dataNasc"><br><br>
+    <Label>Endereco</Label>
+    <input type="text">
+    <Label>CEP: </Label>
+    <input type="number"><br><br>
+    <Label>Telefone: </Label>
+    <input type="text"><br><br>
+    <Label>Email: </Label>
+    <input type="email" name="" id="">
+
+    <script>
+        function campoPessoa(){
+            var radios = document.getElementsByName("pessoa");
+            var cnpj = document.getElementById("cnpj");
+            var cpf = document.getElementById("cpf");
+            var dataNasc = document.getElementById("dataNasc")
+            for(var i = 0; i< radios.length; i++){
+                if(radios[i].checked && radios[i].value == "FISICA"){
+                    cnpj.setAttribute("disabled", "disabled")
+                    cpf.removeAttribute("disabled");
+                    dataNasc.removeAttribute("disabled");
+                }else if(radios[i].checked && radios[i].value == "JURIDICA"){
+                    cpf.setAttribute("disabled", "disabled")
+                    dataNasc.setAttribute("disabled", "disabled")
+                    cnpj.removeAttribute("disabled"); 
+                }
+            }
+        }
+        
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q6-q7-q8</title>
+</head>
+<body>
+    <p id="paragrafo">Isto é um conteudo de um paragrafo!</p>
+    <button onclick="mudarFonteBranco()">fonte branca</button>
+    <button onclick="mudarFontePreto()">fonte preta</button>
+    <button onclick="mudarFundoBranco()">fundo branco</button>
+    <button onclick="mudarFundoPreto()">fundo preto</button>
+    <br><br><br>
+    <button onclick="aumentarFonte()">+</button>
+    <button onclick="diminuirFonte()">-</button>
+    <br><br><br>
+    <button onclick="fonteMaiuscula()">MAIUSCULA</button>
+    <button onclick="fonteMinuscula()">minuscula</button>
+
+    <script>
+        var paragrafo = document.getElementById("paragrafo");
+
+        function mudarFonteBranco(){
+            paragrafo.style.color = "white";
+        }
+        function mudarFontePreto(){
+            paragrafo.style.color = "black";
+        }
+        function mudarFundoBranco(){
+            paragrafo.style.background = "white";
+        }
+        function mudarFundoPreto(){
+            paragrafo.style.background = "black";
+        }
+        //Questao 07
+        function aumentarFonte(){
+            paragrafo.style.fontSize = "60px";
+        }
+        function diminuirFonte(){
+            paragrafo.style.fontSize = "10px";
+        }
+        //Questao 08
+        function fonteMaiuscula(){
+            paragrafo.style.textTransform = "uppercase"
+        }
+        function fonteMinuscula(){
+            paragrafo.style.textTransform = "lowercase"
+        }
+
+    </script>
+</body>
+</html>

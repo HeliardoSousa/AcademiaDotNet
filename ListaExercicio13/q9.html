@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q9</title>
+</head>
+<body>
+    <form>
+        <Label>Login: </Label>
+        <input type="text" id="login">
+        <label>Senha: </label>
+        <input type="password" id="password">
+        <label>Confirme a Senha: </label>
+        <input type="password" id="passwordRepeat">
+        <button type="button" onclick="validar()">Submeter</button>
+    </form>
+
+    <script>
+        var login = document.getElementById("login");
+        var password = document.getElementById("password");
+        var passwordRepeat = document.getElementById("passwordRepeat");
+
+        function validarLogin(){
+            return login.value.length > 0;
+        }
+        function validarSenhas(){
+            return (password.value.length > 6 && password.value.length < 10 && password.value == passwordRepeat.value)
+        }
+        function validar(){
+            if(validarLogin() && validarSenhas()){
+                alert("Formulario ok, pronto para ser submetido!")
+            }else{
+                alert("Preencha o formulario corretamente!")
+            }
+        }
+    </script>
+</body>
+</html>
