@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q3</title>
+</head>
+<body id="principal">
+    <select id="selected" onchange="update()">
+        <option value="Default">Selecione...</option>
+        <option value="Vermelho">Vermelho</option>
+        <option value="Azul">Azul</option>
+        <option value="Verde">Verde</option>
+        <option value="Amarelo">Amarelo</option>
+    </select>
+
+    <script>
+        function update(){
+            var select = document.getElementById("selected");
+            var option = select.options[select.selectedIndex].value;
+            if(option == "Vermelho"){
+                mudaVermelho();
+            }else if(option == "Verde"){
+                mudaVerde();
+            }else if(option == "Amarelo"){
+                mudaAmarelo();
+            }else if(option == "Azul"){
+                mudaAzul();
+            }
+        }
+        function mudaVermelho(){
+            var body = document.getElementById("principal");
+            body.style.background = "red";
+        };
+        function mudaVerde(){
+            var body = document.getElementById("principal");
+            body.style.background = "green";
+        };
+        function mudaAzul(){
+            var body = document.getElementById("principal");
+            body.style.background = "blue";
+        };
+        function mudaAmarelo(){
+            var body = document.getElementById("principal");
+            body.style.background = "yellow";
+        };
+    </script>
+</body>
+</html>

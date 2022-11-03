@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q1</title>
+</head>
+<body id="principal">
+    <button onclick="mudaVermelho()">Mudar Vermelho</button>
+    <button onclick="mudaVerde()">Mudar Verde</button>
+    <button onclick="mudaAzul()">Mudar Azul</button>
+    <button onclick="mudaAmarelo()">Mudar Amarelo</button>
+
+    <script>
+        function mudaVermelho(){
+            var body = document.getElementById("principal");
+            body.style.background = "red";
+        };
+        function mudaVerde(){
+            var body = document.getElementById("principal");
+            body.style.background = "green";
+        };
+        function mudaAzul(){
+            var body = document.getElementById("principal");
+            body.style.background = "blue";
+        };
+        function mudaAmarelo(){
+            var body = document.getElementById("principal");
+            body.style.background = "yellow";
+        };
+    </script>
+</body>
+</html>

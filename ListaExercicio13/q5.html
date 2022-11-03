@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q5</title>
+</head>
+<body>
+    <input type="checkbox" name="opcao" onclick="habilitar()"> Opcao 01
+    <input type="checkbox" name="opcao" onclick="habilitar()"> Opcao 02
+    <input type="checkbox" name="opcao" onclick="habilitar()"> Opcao 03
+    <input type="checkbox" name="opcao" onclick="habilitar()"> Opcao 04
+    <br>
+    <br>
+    <button id="botao" disabled>Enviar</button>
+
+    <script>
+        function habilitar(){
+            var checkedBoxes = document.getElementsByName("opcao");
+            var cont = 0;
+            for(var i = 0; i< checkedBoxes.length; i++){
+                if(checkedBoxes[i].checked){
+                    cont++;
+                }
+            }
+            var botao = document.getElementById("botao");
+            if(cont==0){  
+                botao.setAttribute("disabled", "disabled")
+            }
+            else if(cont < 2){
+                botao.setAttribute("disabled", "disabled")
+            }else if(cont >=2){
+                botao.removeAttribute("disabled"); 
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
