@@ -6,26 +6,33 @@ body{
     height: 40px;
     width: 10%;
     float: left;
+    border-radius: 50%;
 }
 .div-2{
     background-color: blueviolet;
     height: 40px;
     width: 10%;
     float: right;
-    
+    border-radius: 50%;
 }
 .div-3{
     background-color: red;
     height: 40px;
     width: 10%;
     float: left;
+    border-radius: 50%;
 }
 .div-4{
     background-color: green;
     height: 40px;
     width: 10%;
     float: right;
+    border-radius: 50%;
 }
 .div-3-4{
     margin-top: 500px;
+}
+.div-1 > p, .div-2 > p, .div-3 > p, .div-4 > p{
+    margin-top: 10px;
+    margin-left: 8px;
 }
